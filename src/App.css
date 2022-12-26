@@ -1,0 +1,28 @@
+/* Roboto, Rubik */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Rubik:wght@300;400&display=swap');
+
+:root{
+    --pri: #7f0dff;
+    --bg-color: #0d0620;
+    --sec: #2a2440;
+    --tri: #29d4b6;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    transition: 0.4s;
+    /* outline: 1px solid green; */
+}
+
+a{
+    text-decoration: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body{
+    background-color: var(--bg-color);
+}
