@@ -13,19 +13,68 @@
     gap: 15px;
 }
 
-.nav-links .nav-logo-div span {
+.nav-links .nav-logo-div .sidebar-menu div {
+    min-width: 100%;
+    height: 2px;
+    background-color: white;
+    color: white;
+    position: relative;
+}
+
+.nav-links .nav-logo-div .sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    display: none;
+    min-width: 30px;
+    height: 30px;
+    padding: 2px 5px;
+    position: relative;
+    border: 1px solid red;
+    overflow: hidden;
+}
+
+/* ******************************************* */
+.nav-links .nav-logo-div .side-open div:nth-child(1){
+    display: none;
+}
+.nav-links .nav-logo-div .side-open div:nth-child(3){
+    display: none;
+}
+.nav-links .nav-logo-div .side-open div:nth-child(2){
+    display: none;
+}
+.nav-links .nav-logo-div .side-open::before,
+.nav-links .nav-logo-div .side-open::after{
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 2px;
+    background: white;
+    transform: rotate(45deg);
+}
+.nav-links .nav-logo-div .side-open::after{
+    transform: rotate(-45deg);
+
+}
+
+
+
+
+.nav-links .nav-logo-div>span {
     width: 1.5px;
     border-radius: 1px;
     height: 30px;
     background: linear-gradient(var(--pri), var(--tri));
 }
 
-.nav-links .nav-logo-div a {
+.nav-links .nav-logo-div a:first-child {
     max-width: 60px;
     min-width: 60px;
 }
 
-.nav-links .nav-logo-div a img {
+.nav-links .nav-logo-div a:first-child img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -44,7 +93,7 @@
     height: 26px;
 }
 
-.page-links {
+.nav-links .page-links {
     min-width: 72%;
     display: flex;
     justify-content: flex-end;
@@ -55,30 +104,32 @@
     padding: 0 20px;
 }
 
-.page-links > div {
+.nav-links .page-links>div {
     height: 100%;
     display: grid;
     place-items: center;
     position: relative;
 }
 
-.page-links a {
+.nav-links .page-links a {
     color: rgba(255, 255, 255, 0.7);
     font-size: 16px;
     padding: 10px 2px;
     letter-spacing: 1px;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
-.page-links .act{
-    color: white;
-    text-shadow: 0px 0px 1px white;
-}
-.page-links a:hover {
+
+.nav-links .page-links .act {
     color: white;
     text-shadow: 0px 0px 1px white;
 }
 
-.page-links div:has(.act)::after {
+.nav-links .page-links a:hover {
+    color: white;
+    text-shadow: 0px 0px 1px white;
+}
+
+.nav-links .page-links div:has(.act)::after {
     content: '';
     position: absolute;
     top: 0;
@@ -88,7 +139,7 @@
     animation: activelink 0.5s 1 ease-in-out;
 }
 
-.profile-div {
+.nav-links .profile-div {
     display: flex;
     place-items: center;
     margin-left: 15px;
@@ -96,7 +147,7 @@
     position: relative;
 }
 
-.profile-div > div {
+.nav-links .profile-div>div {
     border-radius: 30px;
     padding: 7px;
     display: flex;
@@ -105,14 +156,18 @@
     cursor: pointer;
 }
 
-.profile-div > div svg {
+.nav-links .profile-div>div svg {
     color: white;
     font-size: 1rem;
 }
 
-.search-div {
+.nav-links .search-div {
     display: grid;
     place-items: center;
+}
+
+.nav-links .search-div img {
+    cursor: pointer;
 }
 
 @media (min-width: 1000px) {
@@ -123,40 +178,51 @@
 
 @media (max-width: 930px) {
 
-    .profile-div,
-    .page-links {
+    .nav-links .profile-div,
+    .nav-links .page-links {
         display: none;
     }
 
-    .nav-links .nav-logo-div{
+    .nav-links .nav-logo-div .sidebar-menu {
+        display: flex;
+    }
+
+    .nav-links {
+        padding: 0 5%;
+    }
+
+    .nav-links .nav-logo-div {
         flex-direction: row-reverse;
         justify-content: space-between;
         /* border: 1px solid red; */
         width: 100%;
     }
-    .nav-links .nav-logo-div a{
+
+    .nav-links .nav-logo-div a:first-child {
         margin-right: auto;
         margin-left: auto;
         position: relative;
-        /* left: -20px; */
     }
-    .nav-links .nav-logo-div button{
+
+    .nav-links .nav-logo-div button {
         margin-left: 0;
     }
-    .nav-links .nav-logo-div span{
+
+    .nav-links .nav-logo-div span {
         display: none;
     }
-    
-    .search-div {
+
+    .nav-links .search-div {
         margin-left: auto;
     }
 }
 
 @keyframes activelink {
-    0%{
+    0% {
         width: 0;
     }
-    100%{
+
+    100% {
         width: 110%;
     }
 }

@@ -11,6 +11,7 @@ export default function Navbar() {
 
     const [isMenu, setIsMenu] = React.useState(false);
     const [login, setLogin] = React.useState(false);
+    const [sideMenu, setSideMenu] = React.useState(false);
 
     return (
         <nav className='nav-links'>
@@ -20,6 +21,11 @@ export default function Navbar() {
                 </Link>
                 <span></span>
                 <button>Upgrade</button>
+                <div className={sideMenu ? 'sidebar-menu side-open' : 'sidebar-menu'} onClick={() => setSideMenu((prev) => !prev)}>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </div>
             <div className='page-links'>
                 <div>
