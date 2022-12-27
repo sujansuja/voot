@@ -1,0 +1,81 @@
+.sidebar-div {
+    --dis: 10px;
+    position: relative;
+    width: calc(100vw);
+    height: calc(100vh);
+    /* padding: 5px; */
+    left: 0;
+}
+
+.sidebar {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    height: 100%;
+}
+
+.sidebar .examp {
+    max-height: 100%;
+    overflow-y: scroll;
+    background: url(../images/sideBackground.png);
+    background-color: var(--bg-color);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center 56px;
+}
+
+.sidebar .examp .logo-div {
+    position: sticky;
+    top: 0px;
+    background-color: var(--bg-color);
+    height: 55px;
+}
+
+.sidebar .examp .logo-div a {
+    position: relative;
+    top: 15px;
+    display: block;
+    width: 58px;
+    height: 30px;
+    margin: 0px auto;
+    background-image: url("https://www.voot.com/images/Voot-Logo.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.sidebar .examp > div:not(.logo-div){
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+/* 580px */
+/* width */
+.examp::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+.examp::-webkit-scrollbar-track {
+    /* background: #f1f1f1; */
+    background: transparent;
+}
+
+/* Handle */
+.examp::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+.examp::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* @media (min-width: 930px) {
+    .sidebar,
+    .sidebar-div,
+    .sidebar-div *
+    {
+        display: none;
+    }
+} */

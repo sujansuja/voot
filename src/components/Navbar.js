@@ -3,7 +3,8 @@ import './css/Navbar.css';
 import { NavLink, Link } from 'react-router-dom';
 import { FaUserAlt } from 'react-icons/fa'
 import Menu from './Reuse/Menu';
-import { motion } from 'framer-motion';
+import SideMenu from './Reuse/SideMenu';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export default function Navbar() {
 
@@ -13,11 +14,28 @@ export default function Navbar() {
     const [login, setLogin] = React.useState(false);
     const [sideMenu, setSideMenu] = React.useState(false);
 
+    React.useEffect(() => {
+        console.log("REndered ")
+    }, [sideMenu])
+    
+
     return (
         <nav className='nav-links'>
+            <div className='sidebar-cont'>
+                <AnimatePresence>
+                    {sideMenu && <motion.section
+                        initial={{ left: "-100vw", opacity: 0 }}
+                        animate={{ left: "0px", opacity: 1 }}
+                        exit={{ right: '100vw', opacity: 0 }}
+                        className="sidebar-div"
+                    >
+                        <SideMenu toggle={(erre) => {setSideMenu(erre)}}/>
+                    </motion.section>}
+                </AnimatePresence>
+            </div>
             <div className='nav-logo-div'>
                 <Link to="/">
-                    <img src='https://www.voot.com/images/Voot-Logo.svg' alt='logo' />
+                    <div></div>
                 </Link>
                 <span></span>
                 <button>Upgrade</button>
