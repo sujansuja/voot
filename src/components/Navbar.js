@@ -12,7 +12,7 @@ export default function Navbar() {
 
     const [isMenu, setIsMenu] = React.useState(false);
     const [login, setLogin] = React.useState(false);
-    const [sideMenu, setSideMenu] = React.useState(false);
+    const [sideMenu, setSideMenu] = React.useState(true);
 
     React.useEffect(() => {
         console.log("REndered ")
@@ -48,7 +48,7 @@ export default function Navbar() {
             <div className='page-links'>
                 <div>
                     <NavLink
-                        to="home"
+                        to="/"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }

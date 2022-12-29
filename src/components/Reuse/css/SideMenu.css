@@ -28,6 +28,7 @@
     top: 0px;
     background-color: var(--bg-color);
     height: 55px;
+    margin-bottom: 45px;
 }
 
 .sidebar .examp .logo-div a {
@@ -44,7 +45,7 @@
 
 }
 
-.sidebar .examp > div:not(.logo-div){
+.sidebar .examp>div:not(.logo-div) {
     padding-left: 20px;
     padding-top: 20px;
 }
@@ -69,6 +70,34 @@
 /* Handle on hover */
 .examp::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+.examp .page-links-cont,
+.examp .help-div,
+.examp .login-div {
+    margin-left: 20px;
+}
+
+.examp a {
+    color: #9b8db0;
+    font-size: 14px;
+}
+
+.examp a:hover {
+    color: white;
+}
+
+.examp>div {
+    border-bottom: 1px solid #9b8db0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 14px;
+}
+
+.examp div:first-child,
+.examp div:last-child {
+    border: none;
 }
 
 /* @media (min-width: 930px) {
