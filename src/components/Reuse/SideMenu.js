@@ -18,50 +18,50 @@ export default function SideMenu(props) {
                 </div>
                 <div className='login-div'>
                     {/* <div> */}
-                        <NavLink onClick={() => { props.toggle() }} to="/login">
-                            <p>Login</p>
-                        </NavLink>
+                    <NavLink onClick={() => { props.toggle() }} to="/voot/login">
+                        <p>Login</p>
+                    </NavLink>
                     {/* </div> */}
                 </div>
                 <div className='page-links-cont'>
-                    <NavLink onClick={() => { props.toggle() }} to="/"
+                    <NavLink end onClick={() => { props.toggle() }} to="/voot"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
                     ><p>My Voot</p></NavLink>
-                    <NavLink onClick={() => { props.toggle() }} to="/premium"
+                    <NavLink onClick={() => { props.toggle() }} to="/voot/premium"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
                     ><p>Premium</p></NavLink>
-                    <NavLink onClick={() => { props.toggle() }} to="/sports"
+                    <NavLink onClick={() => { props.toggle() }} to="/voot/sports"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
                     ><p>Sports</p></NavLink>
-                    <NavLink onClick={() => { props.toggle() }} to="/shows"
+                    <NavLink onClick={() => { props.toggle() }} to="/voot/shows"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
                     ><p>Shows</p></NavLink>
-                    <NavLink onClick={() => { props.toggle() }} to="/movies"
+                    <NavLink onClick={() => { props.toggle() }} to="/voot/movies"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
                     ><p>Movies</p></NavLink>
-                    <NavLink onClick={() => { props.toggle() }} to="/kids"
+                    <NavLink onClick={() => { props.toggle() }} to="/voot/kids"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
                     ><p>Kids</p></NavLink>
-                    <NavLink onClick={() => { props.toggle() }} to="/channels"
+                    <NavLink onClick={() => { props.toggle() }} to="/voot/channels"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
                     ><p>Channels</p></NavLink>
                 </div>
                 <div className='help-div'>
-                    <NavLink onClick={() => { props.toggle() }} to="/help">
+                    <NavLink onClick={() => { props.toggle() }} to="/voot/help">
                         <p>Help & Legal</p>
                     </NavLink>
                 </div>

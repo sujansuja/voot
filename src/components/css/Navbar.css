@@ -3,7 +3,6 @@
     padding: 0 2%;
     display: flex;
     height: 60px;
-    /* position: relative; */
     position: sticky;
     top: 0;
     z-index: 10;

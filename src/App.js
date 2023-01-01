@@ -12,29 +12,28 @@ import Kids from './components/Kids'
 import Channels from './components/Channels'
 import Login from './components/Login';
 import Footer from './components/Footer'
-import axios from 'axios';
-import { resolveMotionValue } from 'framer-motion';
+// import { resolveMotionValue } from 'framer-motion';
 
 function App() {
 
   // https://api.open-meteo.com/v1/forecast?hourly=temperature_2m,apparent_temperature,precipitation,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum&current_weather=true&timeformat=unixtime&timezone=Asia%2FBangkok
 
-  
+
   return (
     <div className="App">
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route strict exact path='/contact' element={<Contact />} />
-          <Route strict exact path='/about' element={<About />} />
-          <Route strict exact path='/premium' element={<Premium />} />
-          <Route strict exact path='/sports' element={<Sports />} />
-          <Route strict exact path='/shows' element={<Shows />} />
-          <Route strict exact path='/movies' element={<Movies />} />
-          <Route strict exact path='/kids' element={<Kids />} />
-          <Route strict exact path='/channels' element={<Channels />} />
-          <Route strict exact path='/login' element={<Login />} />
-          <Route strict exact path='/' element={<Home />} />
+          <Route path='/voot/contact' element={<Contact />} />
+          <Route path='/voot/about' element={<About />} />
+          <Route path='/voot/premium' element={<Premium />} />
+          <Route path='/voot/sports' element={<Sports />} />
+          <Route path='/voot/shows' element={<Shows />} />
+          <Route path='/voot/movies' element={<Movies />} />
+          <Route path='/voot/kids' element={<Kids />} />
+          <Route path='/voot/channels' element={<Channels />} />
+          <Route path='/voot/login' element={<Login />} />
+          <Route path='/voot/' element={<Home />} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -14,7 +14,7 @@ export default function Footer() {
             <div className='footer-first'>
                 <div className='logo-div'>
                     <Link to="/">
-                        <img className='logo'src={Logo}  alt='logo' />
+                        <img className='logo' src={Logo} alt='logo' />
                     </Link>
                 </div>
                 <div className='footer-menu'>
@@ -23,19 +23,19 @@ export default function Footer() {
                         <input type="radio" name="btm-radio" />
                     </div>
                     <ul>
-                        <li><Link to='/'>My Voot</Link></li>
-                        <li><Link to='/premium'>Premium</Link></li>
-                        <li><Link to='/sports'>Sports</Link></li>
-                        <li><Link to='/shows'>Shows</Link></li>
-                        <li><Link to='/movies'>Movies</Link></li>
-                        <li><Link to='/kids'>Kids</Link></li>
-                        <li><Link to='/channels'>Channels</Link></li>
+                        <li><Link to='/voot'>My Voot</Link></li>
+                        <li><Link to='/voot/premium'>Premium</Link></li>
+                        <li><Link to='/voot/sports'>Sports</Link></li>
+                        <li><Link to='/voot/shows'>Shows</Link></li>
+                        <li><Link to='/voot/movies'>Movies</Link></li>
+                        <li><Link to='/voot/kids'>Kids</Link></li>
+                        <li><Link to='/voot/channels'>Channels</Link></li>
                     </ul>
                 </div>
                 <div className='footer-menu'>
                     <div>
                         <h2>Legal</h2>
-                        <input type="radio" name="btm-radio"/>
+                        <input type="radio" name="btm-radio" />
                     </div>
                     <ul>
                         <li><a href='https://help.voot.com/about-us' target="_blank" rel="noreferrer">About Us</a></li>
@@ -47,7 +47,7 @@ export default function Footer() {
                 <div className='footer-menu'>
                     <div>
                         <h2>Support</h2>
-                        <input type="radio" name="btm-radio"/>
+                        <input type="radio" name="btm-radio" />
                     </div>
                     <ul>
                         <li><a href="https://help.voot.com/" target="_blank" rel="noreferrer">FAQs</a></li>
@@ -57,7 +57,7 @@ export default function Footer() {
                 <div className='download'>
                     <div>
                         <h2>Download</h2>
-                        <input type="radio" name="btm-radio"/>
+                        <input type="radio" name="btm-radio" />
                     </div>
                     <div>
                         <p>Download our mobile app for your tablet and mobile!</p>
@@ -71,9 +71,9 @@ export default function Footer() {
             </div>
             <div className='footer-btm'>
                 <div>
-                    <a href='https://www.facebook.com/voot/'><img src={Facebook} alt="facebook-logo"/></a>
-                    <a href='https://twitter.com/justvoot'><img src={Twitter} alt="twitter-logo"/></a>
-                    <a href='https://www.youtube.com/channel/UCFHhFwEdsLs2wuvh1YdChHw'><img src={Youtube} alt="youtube-logo"/></a>
+                    <a href='https://www.facebook.com/voot/'><img src={Facebook} alt="facebook-logo" /></a>
+                    <a href='https://twitter.com/justvoot'><img src={Twitter} alt="twitter-logo" /></a>
+                    <a href='https://www.youtube.com/channel/UCFHhFwEdsLs2wuvh1YdChHw'><img src={Youtube} alt="youtube-logo" /></a>
                 </div>
                 <p>Viacom 18 Media Pvt. Ltd @ 2022. All Rights Reserved</p>
             </div>

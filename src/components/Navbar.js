@@ -31,7 +31,7 @@ export default function Navbar() {
                 </AnimatePresence>
             </div>
             <div className='nav-logo-div'>
-                <Link to="/">
+                <Link to="/voot/">
                     <div></div>
                 </Link>
                 <span></span>
@@ -45,7 +45,7 @@ export default function Navbar() {
             <div className='page-links'>
                 <div>
                     <NavLink
-                        to="/"
+                        to="/voot" end
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
@@ -55,7 +55,7 @@ export default function Navbar() {
                 </div>
                 <div>
                     <NavLink
-                        to="premium"
+                        to="voot/premium"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
@@ -64,7 +64,7 @@ export default function Navbar() {
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to="/sports"
+                    <NavLink to="voot/sports"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
@@ -73,7 +73,7 @@ export default function Navbar() {
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to="/shows"
+                    <NavLink to="voot/shows"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
@@ -82,7 +82,7 @@ export default function Navbar() {
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to="/movies"
+                    <NavLink to="voot/movies"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
@@ -91,7 +91,7 @@ export default function Navbar() {
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to="/kids"
+                    <NavLink to="voot/kids"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
@@ -100,7 +100,7 @@ export default function Navbar() {
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to="/channels"
+                    <NavLink to="voot/channels"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
