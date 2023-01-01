@@ -4,6 +4,14 @@ import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
+import Premium from './components/Premium';
+import Sports from './components/Sports';
+import Shows from './components/Shows';
+import Movies from './components/Movies'
+import Kids from './components/Kids'
+import Channels from './components/Channels'
+import Login from './components/Login';
+import Footer from './components/Footer'
 import axios from 'axios';
 import { resolveMotionValue } from 'framer-motion';
 
@@ -17,11 +25,18 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route strict exact path='/home' element={<Home />} />
           <Route strict exact path='/contact' element={<Contact />} />
           <Route strict exact path='/about' element={<About />} />
-          <Route strict exact path='/' element={<h1>Hello</h1>} />
+          <Route strict exact path='/premium' element={<Premium />} />
+          <Route strict exact path='/sports' element={<Sports />} />
+          <Route strict exact path='/shows' element={<Shows />} />
+          <Route strict exact path='/movies' element={<Movies />} />
+          <Route strict exact path='/kids' element={<Kids />} />
+          <Route strict exact path='/channels' element={<Channels />} />
+          <Route strict exact path='/login' element={<Login />} />
+          <Route strict exact path='/' element={<Home />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

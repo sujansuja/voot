@@ -1,11 +1,11 @@
-.menu--cont{
+.menu--cont {
     position: absolute;
-    top: 56px;
+    top: 60px;
     right: -14px;
-
 }
 
-.menu{
+.menu {
+    box-shadow: 0 0 8px 0px black;
     width: 245px;
     background-color: var(--sec);
     border-radius: 5px;
@@ -16,7 +16,7 @@
     text-align: left;
 }
 
-.menu::before{
+.menu::before {
     --posi: 10px;
     content: '';
     position: absolute;
@@ -27,7 +27,7 @@
     border-left: var(--posi) solid transparent;
 }
 
-.menu > *{
+.menu>* {
     border-bottom: 2px solid grey;
     height: 100%;
     /* margin: 0px 0 35px; */
@@ -37,12 +37,12 @@
     padding: 15px 0px;
 }
 
-.menu > *:last-child{
+.menu>*:last-child {
     border: none;
 }
 
 
-.menu a{
+.menu a {
     font-size: 16px;
     font-weight: 400;
     font-family: "Rubik", sans-serif;
@@ -50,8 +50,47 @@
     transition: 0s;
     color: rgba(255, 255, 255, 0.7);
 }
-.menu a:hover{
+
+.menu a:hover {
     color: white;
     text-decoration: underline;
     text-shadow: 0px 0px 1px white;
+}
+
+.inline-div div,
+.inline-div p{
+    display: inline;
+    width: 50px;
+    height: 50px;
+}
+
+.menu-profiles div div::after{
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    /* background-color: #fff; */
+    border-radius: 50px;
+    border: 2px solid white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.menu-profiles div div{
+    position: relative;
+    background-color: var(--pri);
+    border-radius: 20px;
+    width: 25px;
+    height: 25px;
+    padding: 10px 12px;
+    margin-right: 15px;
+    font-size: 12px;
+}
+.menu-profiles > div{
+    margin: 10px;
+}
+.menu-profiles > div{
+    padding: 10px 0;
+}
+.menu-profiles div div{
 }

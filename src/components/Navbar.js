@@ -1,10 +1,11 @@
 import React from 'react';
-import './css/Navbar.css';
 import { NavLink, Link } from 'react-router-dom';
-import { FaUserAlt } from 'react-icons/fa'
+import { FaUserAlt } from 'react-icons/fa';
+import { AiOutlineSearch } from 'react-icons/ai';
 import Menu from './Reuse/Menu';
 import SideMenu from './Reuse/SideMenu';
 import { AnimatePresence, motion } from 'framer-motion';
+import './css/Navbar.css';
 
 export default function Navbar() {
 
@@ -12,12 +13,7 @@ export default function Navbar() {
 
     const [isMenu, setIsMenu] = React.useState(false);
     const [login, setLogin] = React.useState(false);
-    const [sideMenu, setSideMenu] = React.useState(true);
-
-    React.useEffect(() => {
-        console.log("REndered ")
-    }, [sideMenu])
-    
+    const [sideMenu, setSideMenu] = React.useState(false);
 
     return (
         <nav className='nav-links'>
@@ -26,10 +22,11 @@ export default function Navbar() {
                     {sideMenu && <motion.section
                         initial={{ left: "-100vw", opacity: 0 }}
                         animate={{ left: "0px", opacity: 1 }}
-                        exit={{ right: '100vw', opacity: 0 }}
+                        exit={{ left: '100vw', opacity: 0 }}
                         className="sidebar-div"
+                        key="menu"
                     >
-                        <SideMenu toggle={(erre) => {setSideMenu(erre)}}/>
+                        <SideMenu toggle={(erre) => { setSideMenu(erre) }} />
                     </motion.section>}
                 </AnimatePresence>
             </div>
@@ -67,7 +64,7 @@ export default function Navbar() {
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to="sports"
+                    <NavLink to="/sports"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
@@ -76,7 +73,7 @@ export default function Navbar() {
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to="shows"
+                    <NavLink to="/shows"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
@@ -85,7 +82,7 @@ export default function Navbar() {
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to="movies"
+                    <NavLink to="/movies"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
@@ -94,7 +91,7 @@ export default function Navbar() {
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to="kids"
+                    <NavLink to="/kids"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
@@ -103,7 +100,7 @@ export default function Navbar() {
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to="channels"
+                    <NavLink to="/channels"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
@@ -113,7 +110,7 @@ export default function Navbar() {
                 </div>
             </div>
             <div className='search-div'>
-                <img src='https://www.voot.com/images/icon_search_white.svg' alt='search' />
+                <AiOutlineSearch/>
             </div>
             <motion.div className='profile-div'>
                 <motion.div onClick={() => {
@@ -124,7 +121,7 @@ export default function Navbar() {
                 </motion.div>
                 <Menu className="profile-menu" menus={!login ? [
                     // name, to path
-                    ['Login', "login"],
+                    ['Login', "/"],
                     ['Help & Legal', 'help']
                 ] : [
                     [[
@@ -139,9 +136,12 @@ export default function Navbar() {
                         ['Help & Legal', 'help'],
                     ],
                     ['Log out', '/']
-                ]}
+                ]
+            }
                     open={isMenu}
                     handleClick={() => { setIsMenu(false) }}
+                    login={login}
+                    loginHandle={() => {setLogin(!login)}}
                 />
             </motion.div>
         </nav>

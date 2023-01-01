@@ -12,11 +12,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    /* font-family: "Roboto", "Helvetica", "Arial", sans-serif; */
+    font-family: 'Rubik', sans-serif;
     transition: 0.4s;
     /* outline: 1px solid green; */
 }
-
+ul{
+    list-style: none;
+}
 a{
     text-decoration: none;
     user-select: none;
@@ -24,5 +27,30 @@ a{
 }
 
 body{
+    min-width: 250px;
     /* background-color: var(--bg-color); */
+}
+
+nav{
+    position: fixed;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    /* background: #f1f1f1; */
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

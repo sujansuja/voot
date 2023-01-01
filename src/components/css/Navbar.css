@@ -3,7 +3,10 @@
     padding: 0 2%;
     display: flex;
     height: 60px;
-    position: relative;
+    /* position: relative; */
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .nav-links .nav-logo-div {
@@ -167,14 +170,16 @@
     place-items: center;
 }
 
-.nav-links .search-div img {
+.nav-links .search-div svg {
+    /* border: 1px solid red; */
+    color: white;
+    font-size: 1.7rem;
     cursor: pointer;
 }
 
 .sidebar-cont{
-    /* padding: 10px; */
     position: absolute;
-    color: white;
+    height: 100vh;
     left: 0px;
     z-index: 5;
 }
@@ -196,7 +201,7 @@
     }
 
     .nav-links {
-        padding: 0 5%;
+        padding: 0 5% 0 3%;
     }
 
     .nav-links .nav-logo-div {

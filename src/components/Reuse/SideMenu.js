@@ -4,6 +4,9 @@ import { motion } from 'framer-motion';
 import { Link, NavLink } from 'react-router-dom';
 
 export default function SideMenu(props) {
+
+    let activeClassName = "act";
+
     return (
         <motion.section className='sidebar'>
             <div className='examp'>
@@ -14,23 +17,51 @@ export default function SideMenu(props) {
                     </Link>
                 </div>
                 <div className='login-div'>
-                    <div>
-                        <NavLink onClick={() => {props.toggle()} } to="/login">
+                    {/* <div> */}
+                        <NavLink onClick={() => { props.toggle() }} to="/login">
                             <p>Login</p>
                         </NavLink>
-                    </div>
+                    {/* </div> */}
                 </div>
                 <div className='page-links-cont'>
-                    <NavLink onClick={() => {props.toggle()}} to="/"><p>My Voot</p></NavLink>
-                    <NavLink onClick={() => {props.toggle()}} to="/premium"><p>Premium</p></NavLink>
-                    <NavLink onClick={() => {props.toggle()}} to="/sports"><p>Sports</p></NavLink>
-                    <NavLink onClick={() => {props.toggle()}} to="/shows"><p>Shows</p></NavLink>
-                    <NavLink onClick={() => {props.toggle()}} to="/movies"><p>Movies</p></NavLink>
-                    <NavLink onClick={() => {props.toggle()}} to="/kids"><p>Kids</p></NavLink>
-                    <NavLink onClick={() => {props.toggle()}} to="/channlels"><p>Channels</p></NavLink>
+                    <NavLink onClick={() => { props.toggle() }} to="/"
+                        className={({ isActive }) =>
+                            isActive ? activeClassName : undefined
+                        }
+                    ><p>My Voot</p></NavLink>
+                    <NavLink onClick={() => { props.toggle() }} to="/premium"
+                        className={({ isActive }) =>
+                            isActive ? activeClassName : undefined
+                        }
+                    ><p>Premium</p></NavLink>
+                    <NavLink onClick={() => { props.toggle() }} to="/sports"
+                        className={({ isActive }) =>
+                            isActive ? activeClassName : undefined
+                        }
+                    ><p>Sports</p></NavLink>
+                    <NavLink onClick={() => { props.toggle() }} to="/shows"
+                        className={({ isActive }) =>
+                            isActive ? activeClassName : undefined
+                        }
+                    ><p>Shows</p></NavLink>
+                    <NavLink onClick={() => { props.toggle() }} to="/movies"
+                        className={({ isActive }) =>
+                            isActive ? activeClassName : undefined
+                        }
+                    ><p>Movies</p></NavLink>
+                    <NavLink onClick={() => { props.toggle() }} to="/kids"
+                        className={({ isActive }) =>
+                            isActive ? activeClassName : undefined
+                        }
+                    ><p>Kids</p></NavLink>
+                    <NavLink onClick={() => { props.toggle() }} to="/channels"
+                        className={({ isActive }) =>
+                            isActive ? activeClassName : undefined
+                        }
+                    ><p>Channels</p></NavLink>
                 </div>
                 <div className='help-div'>
-                    <NavLink onClick={() => {props.toggle()}} to="/help">
+                    <NavLink onClick={() => { props.toggle() }} to="/help">
                         <p>Help & Legal</p>
                     </NavLink>
                 </div>
