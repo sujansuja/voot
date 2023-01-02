@@ -15,6 +15,8 @@ export default function Navbar() {
     const [login, setLogin] = React.useState(false);
     const [sideMenu, setSideMenu] = React.useState(false);
 
+    const username = ['Username', 'Profilename'];
+    
     return (
         <nav className='nav-links'>
             <div className='sidebar-cont'>
@@ -45,7 +47,7 @@ export default function Navbar() {
             <div className='page-links'>
                 <div>
                     <NavLink
-                        to="/voot" end
+                        to="/voot/" end
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
@@ -55,7 +57,7 @@ export default function Navbar() {
                 </div>
                 <div>
                     <NavLink
-                        to="voot/premium"
+                        to="/voot/premium/"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
@@ -64,7 +66,7 @@ export default function Navbar() {
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to="voot/sports"
+                    <NavLink to="/voot/sports/"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
@@ -73,7 +75,7 @@ export default function Navbar() {
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to="voot/shows"
+                    <NavLink to="/voot/shows/"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
@@ -82,7 +84,7 @@ export default function Navbar() {
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to="voot/movies"
+                    <NavLink to="/voot/movies/"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
@@ -91,7 +93,7 @@ export default function Navbar() {
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to="voot/kids"
+                    <NavLink to="/voot/kids/"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
@@ -100,7 +102,7 @@ export default function Navbar() {
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to="voot/channels"
+                    <NavLink to="/voot/channels/"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
@@ -117,31 +119,18 @@ export default function Navbar() {
                     setIsMenu(prev => !prev)
                 }}
                 >
-                    <FaUserAlt className='profile' />
+                    {login ? 
+                    <div className='profile-letter'>{username[0][0]}</div>
+                    :
+                    <FaUserAlt className='profile-icon' />
+                    }
                 </motion.div>
-                <Menu className="profile-menu" menus={!login ? [
-                    // name, to path
-                    ['Login', "/"],
-                    ['Help & Legal', 'help']
-                ] : [
-                    [[
-                        'User', "profile",
-                        'Add Proflie', "add_profile"
-                    ]],
-                    ['Manage Profiles', 'add_profiles'],
-                    [
-                        ['Voot Select', 'select'],
-                        ['Billing History', 'select'],
-                        ['Setting', 'settings'],
-                        ['Help & Legal', 'help'],
-                    ],
-                    ['Log out', '/']
-                ]
-            }
+                <Menu className="profile-menu" 
                     open={isMenu}
                     handleClick={() => { setIsMenu(false) }}
                     login={login}
                     loginHandle={() => {setLogin(!login)}}
+                    names = {username}
                 />
             </motion.div>
         </nav>

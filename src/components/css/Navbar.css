@@ -158,12 +158,21 @@
     border: 1.5px solid var(--pri);
     cursor: pointer;
 }
+.nav-links .profile-div > div:has(.profile-letter){
+    background:linear-gradient( -120deg, var(--pri), var(--tri)) ;
+    border: 0;
+}
 
 .nav-links .profile-div>div svg {
     color: white;
     font-size: 1rem;
 }
-
+.nav-links .profile-div .profile-letter{
+    color: white;
+    padding: 2px 5px;
+    font-weight: 900;
+    font-size: 11px;
+}
 .nav-links .search-div {
     display: grid;
     place-items: center;

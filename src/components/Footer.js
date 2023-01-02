@@ -13,7 +13,7 @@ export default function Footer() {
         <footer className='footer-cont'>
             <div className='footer-first'>
                 <div className='logo-div'>
-                    <Link to="/">
+                    <Link to="/voot/">
                         <img className='logo' src={Logo} alt='logo' />
                     </Link>
                 </div>
@@ -23,13 +23,13 @@ export default function Footer() {
                         <input type="radio" name="btm-radio" />
                     </div>
                     <ul>
-                        <li><Link to='/voot'>My Voot</Link></li>
-                        <li><Link to='/voot/premium'>Premium</Link></li>
-                        <li><Link to='/voot/sports'>Sports</Link></li>
-                        <li><Link to='/voot/shows'>Shows</Link></li>
-                        <li><Link to='/voot/movies'>Movies</Link></li>
-                        <li><Link to='/voot/kids'>Kids</Link></li>
-                        <li><Link to='/voot/channels'>Channels</Link></li>
+                        <li><Link to='/voot/'>My Voot</Link></li>
+                        <li><Link to='/voot/premium/'>Premium</Link></li>
+                        <li><Link to='/voot/sports/'>Sports</Link></li>
+                        <li><Link to='/voot/shows/'>Shows</Link></li>
+                        <li><Link to='/voot/movies/'>Movies</Link></li>
+                        <li><Link to='/voot/kids/'>Kids</Link></li>
+                        <li><Link to='/voot/channels/'>Channels</Link></li>
                     </ul>
                 </div>
                 <div className='footer-menu'>

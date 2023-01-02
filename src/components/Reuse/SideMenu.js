@@ -2,7 +2,7 @@ import React from 'react';
 import './css/SideMenu.css';
 import { motion } from 'framer-motion';
 import { Link, NavLink } from 'react-router-dom';
-
+import Logo from '../../images/Voot-Logo.png'
 export default function SideMenu(props) {
 
     let activeClassName = "act";
@@ -11,57 +11,57 @@ export default function SideMenu(props) {
         <motion.section className='sidebar'>
             <div className='examp'>
                 <div className='logo-div'>
-                    <Link to="/">
+                    <Link to="/voot/">
                         <div></div>
-                        {/* <img src='https://www.voot.com/images/Voot-Logo.svg' alt='logo' /> */}
+                        <img src={Logo} alt='logo' />
                     </Link>
                 </div>
                 <div className='login-div'>
                     {/* <div> */}
-                    <NavLink onClick={() => { props.toggle() }} to="/voot/login">
+                    <NavLink onClick={() => { props.toggle() }} to="/voot/login/">
                         <p>Login</p>
                     </NavLink>
                     {/* </div> */}
                 </div>
                 <div className='page-links-cont'>
-                    <NavLink end onClick={() => { props.toggle() }} to="/voot"
+                    <NavLink end onClick={() => { props.toggle() }} to="/voot/"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
                     ><p>My Voot</p></NavLink>
-                    <NavLink onClick={() => { props.toggle() }} to="/voot/premium"
+                    <NavLink onClick={() => { props.toggle() }} to="/voot/premium/"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
                     ><p>Premium</p></NavLink>
-                    <NavLink onClick={() => { props.toggle() }} to="/voot/sports"
+                    <NavLink onClick={() => { props.toggle() }} to="/voot/sports/"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
                     ><p>Sports</p></NavLink>
-                    <NavLink onClick={() => { props.toggle() }} to="/voot/shows"
+                    <NavLink onClick={() => { props.toggle() }} to="/voot/shows/"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
                     ><p>Shows</p></NavLink>
-                    <NavLink onClick={() => { props.toggle() }} to="/voot/movies"
+                    <NavLink onClick={() => { props.toggle() }} to="/voot/movies/"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
                     ><p>Movies</p></NavLink>
-                    <NavLink onClick={() => { props.toggle() }} to="/voot/kids"
+                    <NavLink onClick={() => { props.toggle() }} to="/voot/kids/"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
                     ><p>Kids</p></NavLink>
-                    <NavLink onClick={() => { props.toggle() }} to="/voot/channels"
+                    <NavLink onClick={() => { props.toggle() }} to="/voot/channels/"
                         className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                         }
                     ><p>Channels</p></NavLink>
                 </div>
                 <div className='help-div'>
-                    <NavLink onClick={() => { props.toggle() }} to="/voot/help">
+                    <NavLink onClick={() => { props.toggle() }} to="/voot/help/">
                         <p>Help & Legal</p>
                     </NavLink>
                 </div>
