@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/voot/static/css/main.4fd00dc6.css",
+    "main.js": "/voot/static/js/main.89467850.js",
+    "static/media/sideBackground.png": "/voot/static/media/sideBackground.bdad9aec8e6870978d95.png",
+    "static/media/Voot-Logo.svg": "/voot/static/media/Voot-Logo.21d90404fece10ecd9d9.svg",
+    "static/media/slick.svg": "/voot/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/voot/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/voot/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/voot/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/voot/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.4fd00dc6.css",
+    "static/js/main.89467850.js"
+  ]
+}
