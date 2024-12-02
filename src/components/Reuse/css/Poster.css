@@ -1,0 +1,25 @@
+.poster-cont {
+    padding: 5px 0;
+    margin-block: 20px;
+}
+.poster-cont a{
+    display: block;
+    width: calc(100% - 40px);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.poster-cont img {
+    max-width: 100%;
+    transition: 1s;
+}
+
+.poster-cont img:hover {
+    transform: scale(1.1);
+
+}
+@media screen and (width < 900) {
+    .poster-cont {
+        padding: 100px;
+    }
+}

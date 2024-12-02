@@ -1,0 +1,33 @@
+.filter-btn-cont{
+    color: white;
+    padding-inline: var(--padd);
+    padding-block: 10px;
+    background: var(--bg-color);
+    overflow: auto;
+    width: min-content;
+}
+.filter-btn-cont::-webkit-scrollbar{
+    display: none;
+}
+.filter-btn-cont > div{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0 10px;
+}
+.filter-btn{
+    padding: 7px 20px;
+    border: 1px solid white;
+    border-radius: 25px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: .5px;
+    display: inline;
+    width: max-content;
+    font-size: var(--paraFont);
+}
+
+@media screen and (width < 900px) {
+    .filter-btn-cont{
+        width: auto;
+    }
+}

@@ -13,7 +13,7 @@ export default function SideMenu(props) {
                 <div className='logo-div'>
                     <Link to="/voot/">
                         <div></div>
-                        <img src={Logo} alt='logo' />
+                        {/* <img src={Logo} alt='logo' /> */}
                     </Link>
                 </div>
                 <div className='login-div'>

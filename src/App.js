@@ -34,6 +34,7 @@ function App() {
           <Route path='/voot/channels' element={<Channels />} />
           <Route path='/voot/login' element={<Login />} />
           <Route path='/voot/' element={<Home />} />
+          <Route path='/' element={<Home />} />
         </Routes>
         <Footer />
       </BrowserRouter>

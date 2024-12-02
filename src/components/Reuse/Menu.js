@@ -43,7 +43,7 @@ export default function Menu(props) {
                                 </div>
                             </div>
                             <div>
-                                <a>Manage Profiles</a>
+                                <a href="https://www.google.com">Manage Profiles</a>
                             </div>
                             <div className='general'>
                                 <div>

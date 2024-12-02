@@ -1,37 +1,46 @@
 /* Roboto, Rubik */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Rubik:wght@300;400&display=swap');
 
-:root{
+:root {
     --pri: #7f0dff;
     --bg-color: #0d0620;
     --sec: #2a2440;
     --tri: #29d4b6;
+    --headFont: 20px;
+    --paraFont: 18px;
+    --padd: 20px;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     /* font-family: "Roboto", "Helvetica", "Arial", sans-serif; */
     font-family: 'Rubik', sans-serif;
-    transition: 0.4s;
-    /* outline: 1px solid green; */
+    color: white;
 }
-ul{
+
+ul {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
 }
 
-body{
-    min-width: 250px;
-    /* background-color: var(--bg-color); */
+img {
+    display: block;
 }
 
-nav{
+body {
+    min-width: 250px;
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+}
+
+nav {
     position: fixed;
 }
 
@@ -53,4 +62,12 @@ nav{
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+@media screen and (width < 600px) {
+    :root {
+        --headFont: 14px;
+        --paraFont: 12px;
+        --padd: 5px;
+    }
 }

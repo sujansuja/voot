@@ -39,17 +39,20 @@
 }
 
 /* ******************************************* */
-.nav-links .nav-logo-div .side-open div:nth-child(1){
+.nav-links .nav-logo-div .side-open div:nth-child(1) {
     display: none;
 }
-.nav-links .nav-logo-div .side-open div:nth-child(3){
+
+.nav-links .nav-logo-div .side-open div:nth-child(3) {
     display: none;
 }
-.nav-links .nav-logo-div .side-open div:nth-child(2){
+
+.nav-links .nav-logo-div .side-open div:nth-child(2) {
     display: none;
 }
+
 .nav-links .nav-logo-div .side-open::before,
-.nav-links .nav-logo-div .side-open::after{
+.nav-links .nav-logo-div .side-open::after {
     content: '';
     width: 70%;
     position: absolute;
@@ -57,10 +60,12 @@
     background: white;
     transform: rotate(45deg);
 }
-.nav-links .nav-logo-div .side-open::after{
+
+.nav-links .nav-logo-div .side-open::after {
     transform: rotate(-45deg);
 
 }
+
 .nav-links .nav-logo-div>span {
     width: 1.5px;
     border-radius: 1px;
@@ -68,7 +73,7 @@
     background: linear-gradient(var(--pri), var(--tri));
 }
 
-.nav-links .nav-logo-div > a div {
+.nav-links .nav-logo-div>a div {
     background-image: url(../../images/Voot-Logo.svg);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -76,16 +81,18 @@
     width: 100%;
     height: 100%;
 }
-.nav-links .nav-logo-div > a {
+
+.nav-links .nav-logo-div>a {
     max-width: 60px;
     min-width: 60px;
     height: 30px;
-;    cursor: pointer;
+    cursor: pointer;
 }
 
 .nav-links .nav-logo-div button {
     padding: 5px 10px;
     background-color: var(--tri);
+    color: black;
     outline: none;
     border: none;
     border-radius: 2px;
@@ -158,8 +165,9 @@
     border: 1.5px solid var(--pri);
     cursor: pointer;
 }
-.nav-links .profile-div > div:has(.profile-letter){
-    background:linear-gradient( -120deg, var(--pri), var(--tri)) ;
+
+.nav-links .profile-div>div:has(.profile-letter) {
+    background: linear-gradient(-120deg, var(--pri), var(--tri));
     border: 0;
 }
 
@@ -167,12 +175,14 @@
     color: white;
     font-size: 1rem;
 }
-.nav-links .profile-div .profile-letter{
+
+.nav-links .profile-div .profile-letter {
     color: white;
     padding: 2px 5px;
     font-weight: 900;
     font-size: 11px;
 }
+
 .nav-links .search-div {
     display: grid;
     place-items: center;
@@ -185,7 +195,7 @@
     cursor: pointer;
 }
 
-.sidebar-cont{
+.sidebar-cont {
     position: absolute;
     height: 100vh;
     left: 0px;
@@ -204,6 +214,7 @@
     .nav-links .page-links {
         display: none;
     }
+
     .nav-links .nav-logo-div .sidebar-menu {
         display: flex;
     }
